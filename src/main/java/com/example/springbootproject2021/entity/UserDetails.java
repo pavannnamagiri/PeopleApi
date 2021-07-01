@@ -28,7 +28,14 @@ public class UserDetails {
 
     private String photoUrl;
 
-    public UserDetails(String firstName, String lastName, String gender, String dob, String email, String phone, String photoUrl) {
+    private String linkedin;
+
+    private String instagram;
+
+    private String description;
+
+
+    public UserDetails(String firstName, String lastName, String gender, String dob, String email, String phone, String photoUrl, String linkedin, String instagram, String description) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
@@ -36,5 +43,10 @@ public class UserDetails {
         this.email = email;
         this.phone = phone;
         this.photoUrl = photoUrl;
+        this.linkedin = linkedin;
+        this.instagram = instagram;
+        this.description = description;
     }
+
+
 }
