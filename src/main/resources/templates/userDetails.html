@@ -12,8 +12,19 @@
     <title>Hello, world!</title>
 </head>
 <body>
+<h1 style="color: #f2f2f2;
+    background: #ff4a4a;
+    font-size: 55px;
+    line-height: 74px;
+    font-weight: 700;
+    margin: 0 5px 24px;
+    padding: 10px;
+    margin: 0 5px 24px;
+    font-family: 'Libre Baskerville', serif;text-align: center">Digital Card</h1>
 <div class="card mx-auto" style="width: 18rem;"  th:with="userDetail =${userDetails}">
-    <img style="border-radius: 150px" class="card-img-top" th:src="@{${userDetail.photoUrl}}" alt="Card image cap">
+    <img style="border-radius: 150px;height: 180px;
+    width: fit-content;box-shadow: 5px 10px 18px #888888;
+    margin: auto;" class="card-img-top" th:src="@{${userDetail.photoUrl}}" alt="Card image cap">
     <div class="card-body">
         <h5 class="card-title text-capitalize" th:text="${userDetail.firstName}+' '+${userDetail.lastName}"></h5>
         <p class="card-text" th:text="${userDetail.description}">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -21,8 +32,8 @@
     <ul class="list-group list-group-flush">
         <li class="list-group-item"><i class="fa fa-envelope"></i> <span th:text="'Email: '+ ${userDetails.email}"></span></li>
         <li class="list-group-item"><i class="fa fa-phone"></i> <span th:text="'Phone: '+ ${userDetails.phone}"></span></li>
-        <li class="list-group-item"><i class="fa fa-linkedin"></i> <a th:href="@{${userDetails.linkedin}}">LinkedIn</a></li>
-        <li class="list-group-item"><i class="fa fa-instagram"></i> <a th:href="@{${userDetails.instagram}}">Instagram</a></li>
+        <li class="list-group-item"><i class="fa fa-linkedin"></i> <a target="_blank" th:href="@{${userDetails.linkedin}}">LinkedIn</a></li>
+        <li class="list-group-item"><i class="fa fa-instagram"></i> <a target="_blank" th:href="@{${userDetails.instagram}}">Instagram</a></li>
     </ul>
 <!--    <div class="card-body">-->
 <!--        <a href="#" class="card-link">Card link</a>-->
