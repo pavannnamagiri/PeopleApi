@@ -34,8 +34,8 @@ public class UserController {
 
     @GetMapping
     public String getUserDetailPage(@RequestParam(name="email") String email, Model model){
-        //UserDetails userDetails = userRepository.findByEmail(email);
-        UserDetails userDetails = new UserDetails("pawan", "namagiri", "Male", "30/09/1997", "pavan@gmail.com", "9573279903", "https://media-exp3.licdn.com/dms/image/C5603AQEM5FsLVCbMAw/profile-displayphoto-shrink_200_200/0/1625077800206?e=1630540800&v=beta&t=B2-hfCnUNO9l63Kt7Ao5YXfMfcVqbMubwNxq_0yW4gY");
+        UserDetails userDetails = userRepository.findByEmail(email);
+        //UserDetails userDetails = new UserDetails("pawan", "namagiri", "Male", "30/09/1997", "pavan@gmail.com", "9573279903", "https://media-exp3.licdn.com/dms/image/C5603AQEM5FsLVCbMAw/profile-displayphoto-shrink_200_200/0/1625077800206?e=1630540800&v=beta&t=B2-hfCnUNO9l63Kt7Ao5YXfMfcVqbMubwNxq_0yW4gY");
         model.addAttribute("userDetails", userDetails);
         return "userDetails";
     }
