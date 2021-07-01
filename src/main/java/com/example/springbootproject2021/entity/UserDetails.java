@@ -28,4 +28,13 @@ public class UserDetails {
 
     private String photoUrl;
 
+    public UserDetails(String firstName, String lastName, String gender, String dob, String email, String phone, String photoUrl) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gender = gender;
+        this.dob = dob;
+        this.email = email;
+        this.phone = phone;
+        this.photoUrl = photoUrl;
+    }
 }
