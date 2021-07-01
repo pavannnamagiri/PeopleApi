@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 /**
  * @author Pawan.Namagiri
  */
-public interface UserRepository extends MongoRepository<UserDetails, Long> {
+public interface UserRepository extends MongoRepository<UserDetails, String> {
 
     public UserDetails findByEmail(String email);
 }
