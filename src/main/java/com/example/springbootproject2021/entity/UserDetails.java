@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 /**
  * @author Pawan.Namagiri
  */
-@Document(collation = "BasicDetails")
+@Document(collection = "BasicDetails")
 @Data
 public class UserDetails {
 
