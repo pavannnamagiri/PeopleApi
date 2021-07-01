@@ -19,7 +19,7 @@ public class UserController {
     UserRepository userRepository;
 
 
-    @GetMapping("/basicDetails")
+    @GetMapping(path="/basicDetails")
     public UserDetails getUserBasicDetails(@RequestParam(name="email") String email) {
         UserDetails userDetails = userRepository.findByEmail(email);
 
